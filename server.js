@@ -4,6 +4,8 @@ const app = express()
 const mongoose = require('mongoose')
 const studentRoutes = require('./routes/studentRouter')
 const attendanceRoutes = require('./routes/attendanceRouter')
+const courseRoutes = require('./routes/courseRouter')
+const categoryRoutes = require('./routes/categoryRouter')
 const cors = require('cors')
 const path = require('path');
 
@@ -13,6 +15,8 @@ app.use('/students', express.static(path.join(__dirname, 'students')));
 
 app.use('/api/students', studentRoutes);
 app.use('/api/attendance', attendanceRoutes);
+app.use('/api/course', courseRoutes)
+app.use('/api/category', categoryRoutes)
 
 mongoose.connect(process.env.CONNECTION_LINK).then(() => {
     console.log("Connected to MongoDB");
