@@ -11,13 +11,13 @@ exports.createCourse = async (req, res) => {
 };
 
 exports.getCourses = async (req, res) => {
-  const courses = await Course.find().populate('instructor');
+  const courses = await Course.find().populate('category')
   res.json(courses);
 };
 
 exports.getCourseById = async (req, res) => {
   try {
-    const course = await Course.findById(req.params.id).populate('instructor');
+    const course = await Course.findById(req.params.id)
     if (!course) return res.status(404).json({ error: 'Not found' });
     res.json(course);
   } catch (err) {
