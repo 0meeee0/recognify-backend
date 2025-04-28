@@ -5,6 +5,12 @@ const StudentSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  role: {
+    type: String,
+    enum: ['student', 'teacher'],
+    default: 'student',
+    required: true
+  },
   imagePath: {
     type: String,
     required: true
