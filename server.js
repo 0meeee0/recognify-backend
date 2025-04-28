@@ -6,6 +6,7 @@ const studentRoutes = require('./routes/studentRouter')
 const attendanceRoutes = require('./routes/attendanceRouter')
 const courseRoutes = require('./routes/courseRouter')
 const categoryRoutes = require('./routes/categoryRouter')
+const authRoutes = require('./routes/authRouter')
 const cors = require('cors')
 const path = require('path');
 
@@ -17,6 +18,7 @@ app.use('/api/students', studentRoutes);
 app.use('/api/attendance', attendanceRoutes);
 app.use('/api/course', courseRoutes)
 app.use('/api/category', categoryRoutes)
+app.use('/api/auth', authRoutes)
 
 mongoose.connect(process.env.CONNECTION_LINK).then(() => {
     console.log("Connected to MongoDB");
