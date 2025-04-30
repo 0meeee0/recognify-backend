@@ -6,7 +6,7 @@ const {authenticate} = require('../middleware/authMiddleware')
 router.get('/', categoryController.getCategories);
 router.get('/:id', categoryController.getCategoryById);
 
-router.use(authenticate)
+
 
 router.post('/', categoryController.createCategory);
 router.put('/:id', categoryController.updateCategory);
