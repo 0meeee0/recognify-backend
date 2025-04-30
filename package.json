@@ -11,7 +11,8 @@
     "multer": "^1.4.5-lts.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "mkdir -p dist && cp -r src/* dist/"
   },
   "devDependencies": {
     "jest": "^29.7.0",
