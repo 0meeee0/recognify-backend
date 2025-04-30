@@ -13,6 +13,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      CONNECTION_LINK: mongodb://localhost:27017/recognify
+      JWT_SECRET: secret
 
     strategy:
       matrix:
