@@ -15,7 +15,6 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm run build
 
       - name: Get SSH Key and set permissions
         run: |
